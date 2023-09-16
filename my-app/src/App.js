@@ -1,14 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
-
+import Navbar from './Components/Navbar';
+import TextForm from './Components/TextForm';
 
 function App() {
   return (
-    <div className="blank">
-      <a href='google.com' className="link">
-        Phishing website p enter kijiye
-      </a>
-    </div>
+   <>
+<Navbar title="UtilsApp"></Navbar>
+
+<div className="container mt-5">
+<TextForm title="Enter text here: "></TextForm>
+</div>
+
+   </>
   );
 }
 

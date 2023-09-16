@@ -1,0 +1,3 @@
+rfc - react function based component
+class ka className
+for ka htmlFor
