@@ -10,3 +10,6 @@ eg. measuring innerWidth of screen
 **clean-up code runs before the event listener**
 
 5.BrowserRouter - working on browser, use "HashRouter" if you don't want to change the URL.
+6. /boooks/1 and /books/newBook mein router confuse nhi hoga and newBook ko priority dega.
+7. we can also use "useRoutes" hook.
+8. There is <Naviagte> tag also
