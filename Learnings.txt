@@ -1,3 +1,8 @@
-rfc - react function based component
-class ka className
-for ka htmlFor
+1. rfc - react function based component
+	class ka className
+	for ka htmlFor
+2. cd proj, npm start
+3. you can onlu use hook inside the function.
+4. useEffect api calls.- i want to do something, when something happens.
+   this you could use everytime yr component renders or something specific changes.
+eg. measuring innerWidth of screen
