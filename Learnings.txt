@@ -6,3 +6,7 @@
 4. useEffect api calls.- i want to do something, when something happens.
    this you could use everytime yr component renders or something specific changes.
 eg. measuring innerWidth of screen
+
+**clean-up code runs before the event listener**
+
+5.BrowserRouter - working on browser, use "HashRouter" if you don't want to change the URL.
