@@ -1,0 +1,181 @@
+/* Higher oder function*/ 
+
+=> aisa func jo accept krle ek aur fnc ya fir wo return krde ek aur func. eg forEach
+=> In this definition, operations can mean taking one or more functions as an argument
+    OR returning a function as the result. It doesn't have to do both. Doing one or the 
+    other qualifies a function as a higher order function.
+    eg. forEach(), map()
+    const arr1 = [1, 2, 3];
+    const arr2 = arr1.map(item => item * 2);
+    console.log(arr2);
+
+    ****************************************************************************
+
+/* Constructor function*/
+
+=> what?
+   normal func jisme "this" ka istemaal ho and aap func ko call krte waqt "new" keyword 
+   ka use kre.
+=> A func which whenever invoked with "new keyword" returns an object, if we use "this"
+   keyword inside that function, it returns an obj with all of the properties and methods 
+   mentioned inside that function. 
+=> why use?
+   jab aapke paas aisa koi bhi mauka ho ke aapko ek jaisi properties wale bahut saare
+   elements banane hai us waqt hum constructor function use krenge.
+   eg.
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Object Constructors</h2>
+
+<p id="demo"></p>
+
+<script>
+
+// Constructor function for Person objects
+function Person(first, last, age, eye) {
+  this.firstName = first;
+  this.lastName = last;
+  this.age = age;
+  this.eyeColor = eye;
+}
+
+// Create two Person objects
+const myFather = new Person("John", "Doe", 50, "blue");
+const myMother = new Person("Sally", "Rally", 48, "green");
+
+// Display age
+document.getElementById("demo").innerHTML =
+"My father is " + myFather.age + ". My mother is " + myMother.age + "."; 
+
+</script>
+
+</body>
+</html>
+
+To prove functions are objects in JavaScript
+// We can add properties to functions like we do with objects
+myFather.age = '80';
+
+  ********************************************************************************
+
+  /* First class function */
+
+  A language is said to have First class functions when the functions in that language are  treated as normal
+  values or like variables, you can save them, you can pass them as arguments to another functions.
+  eg. pass - setTimeOut(),map()
+
+
+   ********************************************************************************
+
+   /* new keyword */
+
+   The new keyword is used in JavaScript to create a object from a constructor function. The new keyword
+   has to be placed before the constructor function call and will do the following things: Creates a new object.
+
+   *********************************************************************************
+
+   /* IIFE */
+
+   An IIFE (Immediately Invoked Function Expression) is a JavaScript function that runs as soon as it is defined. 
+   (function () {
+    // …
+   })();
+   //  the second parenthesis is responsible to tell the compiler that the function expression has to be executed 
+       immediately.
+
+       The Function Expression allows us to create an anonymous function that doesn’t have any function name which
+       is the main difference between Function Expression and Function Declaration. A function expression can be 
+       used as an IIFE (Immediately Invoked Function Expression)which runs as soon as it is defined. 
+
+       Function Expressions: It is simple to understand that a Function Expression is a Function that is used as an 
+       expression. JavaScript lets us use Functions as Function Expressions if we Assign the Function to a variable,
+       wrap the Function within parentheses or put a logical not in front of a function. The following program 
+       illustrates the different ways we can create a Function Expression. 
+
+       // Creating Function Expression by assigning to a variable. 
+        var myFunc = function() { return "GeeksforGeeks"; }; 
+
+        // Creating Function Expression Using Logical Not. 
+        !function() { return "GeeksforGeeks"; }; 
+
+        // Creating Function Expression Using Parentheses. 
+        (function() { return "GeeksforGeeks"; });
+
+   why need?
+   1. We would also use IIFE to create private and public variables and methods. 
+   2. Avoid polluting the global namespace
+      Because our application could include many functions and global variables from different source files, it's 
+      important to limit the number of global variables. If we have some initiation code that we don't need to use 
+      again, we could use the IIFE pattern. As we will not reuse the code again, using IIFE in this case is better 
+      than using a function declaration or a function expression.
+
+  Notes:
+  1.IIFEs have their own scope i.e. the variables you declare in the Function Expression will not be available outside 
+  the function.
+  2.Similarly to other functions IIFEs can also be named or anonymous, but even if an IIFE does have a name it is 
+  impossible to refer/invoke it.
+  3.IIFEs can also have parameters. For example, 
+  <script> 
+	// Declaring the parameter required. 
+	(function(dt) { 
+		console.log(dt.toLocaleTimeString()); 
+		// Passing the Parameter. 
+	})(new Date()); 
+</script>
+
+use cases:
+Avoid polluting the global namespace 
+To create closures
+Avoid conflict of variable names between libraries and programs.
+IIFE is used to create private and  public variables and methods
+It is used to execute the async and await function
+It is used in JQuery Library
+It is used to work with require function
+
+var ans =(function(){
+  var privateVal = 23; //private
+
+  return{
+   getter: function(){
+      console.log(privateVal);
+   },
+   setter: function(val){
+      priavteVal = val;
+   }
+  }
+})()
+
+***************************************************************************************
+
+/* Prototype */
+
+js by default adds a property called [[prototype]]. It contains many helper properties
+and methods we can use to complete our tasks.
+(many prop and methods are already avaialble to use by js creators inside prototype 
+ of every OBJECT) eg. .length()
+
+ **************************************************************************************
+
+ /* Prototype inheritence */
+
+      let animal = {
+      eats: true
+      };
+      let rabbit = {
+      jumps: true
+      };
+
+      rabbit.__proto__ = animal;
+
+****************************************************************************************
+
+/* 'This' keyword */
+
+
+
+
+
+ 
