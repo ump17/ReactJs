@@ -254,9 +254,47 @@ console.log(xyz());
 
 /* Closure */
 
+Lexical scope is the ability for a function scope to access variables from the parent scope.
+
+function init() {
+    var name = "Mozilla";
+   // name is a local variable created by init
+  function displayName() {
+    // displayName() is the inner function, that forms the closure
+    console.log(name); // use variable declared in the parent function
+  }
+  displayName();
+}
+init();
+
+
 Closure- > function bundled with its lexical env.
 
+function makeFunc() {
+  const name = "Mozilla";
+  function displayName() {
+    console.log(name);
+  }
+  return displayName;  // here function with its lexical scope will be return
+}
+
+const myFunc = makeFunc();
+myFunc();
+
+Note: callback (a single function that is executed in response to the event).
+
+for practical example:
+   https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures#practical_closures
+   OR 'chai and code' - lexical scoping and closure video.
+
+   eg.
+   function makeSizer(size) {
+      return function () {
+         document.body.style.fontSize = `${size}px`;
+      };
+      }
 
 
-
- 
+   document.getElementById("size-12").onclick = makeSizer(12);
+   document.getElementById("size-14").onclick = makeSizer(14);
+   document.getElementById("size-16").onclick = makeSizer(16);
